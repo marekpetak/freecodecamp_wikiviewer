@@ -1,0 +1,31 @@
+<html ng-app="App">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link href="hhttps://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+
+    <title>a wiki thingy</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="data-holder" class="row">
+            <div class="col-sm-12 text-center">
+                <p id="today-is">Today is {{weather.current.date}}</p>
+                <p id="temp-text" ng-click="changeUnits()" title="click to change units ...">Temperature: {{weather.current.temp}} <i class="wi {{unitsIcon}}"></i></p>
+                <p id="weather-icon"><i class="wi {{weather.icon}}" ng-show="weather.icon"></i></p>
+                <p id="weather-text">{{weather.current.text}} </p>
+            </div>
+        </div>
+    </div>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.0/angular.js'></script>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
