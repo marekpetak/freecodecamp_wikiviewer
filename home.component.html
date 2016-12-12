@@ -1,0 +1,32 @@
+<div class="jumbotron">
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="wiki article ..." ng-model="$ctrl.searchValue">
+        <span class="input-group-btn">
+        <button class="btn btn-default" type="button" ng-click="$ctrl.searchWiki()">
+            search
+        </button>
+        </span>
+    </div>
+
+    <small>
+        <a href="https://en.wikipedia.org/wiki/Special:Random">random wiki article</p></a>
+    </small>
+</div>
+<div>
+    <ul class="list-group">
+        <li class="list-group-item" ng-repeat="item in $ctrl.searchResult">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <strong>
+                        <a ng-href="https://en.wikipedia.org/?curid={{item.pageid}}">
+                            {{item.title}}
+                        </a>
+                    </strong>
+                </div>
+                <div class="panel-body">
+                    {{item.extract}}
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
